@@ -1,11 +1,11 @@
 const express = require('express');
-const postsRouter = require('./routes/postsRouter');
+const userRouter = require('./routes/userRouter');
 
 const server = express();
 
 server.use(express.json());
 
-server.use('/api/posts', postsRouter);
+server.use('/api/posts', userRouter);
 
 server.get('/', async (req, res) => {
 	res.send(`
